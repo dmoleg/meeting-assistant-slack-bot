@@ -1,0 +1,19 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'lt.bit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'me.ramswaroop.jbot:jbot:4.1.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
