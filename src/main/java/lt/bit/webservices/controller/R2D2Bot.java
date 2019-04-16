@@ -6,20 +6,13 @@ import me.ramswaroop.jbot.core.common.EventType;
 import me.ramswaroop.jbot.core.slack.Bot;
 import me.ramswaroop.jbot.core.slack.models.Event;
 import me.ramswaroop.jbot.core.slack.models.Message;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketSession;
 
-import javax.validation.Valid;
-<<<<<<< Updated upstream
-=======
 import java.io.IOException;
-import java.security.GeneralSecurityException;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.stream.Collectors;
->>>>>>> Stashed changes
 
 @Component
 public class R2D2Bot extends Bot {
@@ -55,8 +48,6 @@ public class R2D2Bot extends Bot {
             reply(session, event, new Message("Thank you for trust!"));
         }
     }
-<<<<<<< Updated upstream
-=======
 
     @Controller(events = {EventType.DIRECT_MESSAGE, EventType.MESSAGE}, pattern = "(setup meeting)", next = "confirmTiming")
     public void setupMeeting(WebSocketSession session, Event event) {
@@ -101,5 +92,4 @@ public class R2D2Bot extends Bot {
         }
         stopConversation(event);
     }
->>>>>>> Stashed changes
 }
